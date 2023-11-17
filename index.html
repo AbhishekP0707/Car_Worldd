@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   
+    <h2 class="text-center text-primary mt-5">Car World</h2>
+    <div class="container mt-3">
+        <div class="row p-3 d-flex justify-content-between">
+            <div class="col col-6 rounded shadow border border-3 border-dark-light p-4 ">
+                <h3 class="text-center text-primary mt-5">Enter Details</h3>
+                <form action="" id="myform">
+                    <label for="">Car Brand</label>
+                    <input type="text" class="form-control mt-2" id="carbrand" placeholder="Car Brand">
+                    <label for="">Price</label>
+                    <input type="text" class="form-control mt-2" id="price" placeholder="Price">
+                    <label for="">Key</label>
+                    <input type="text" class="form-control mt-2" id="carkey" placeholder="Key">
+                    <button type="button" class="btn border border-1 border-success text-success subtle  px-6 mt-4 d-grid gap-2 mx-auto" onclick="store()">Store Records</button>
+                </form>
+            </div>
+            <div class=" col col-3 rounded shadow border border-3 border-dark-light p-4 ">
+                <h3 class="text-center text-primary mt-5">Enter Key to <br> Retrieve Item</h3>
+                <form action="" id="myform2">
+                    <label for="">Key</label>
+                    <input type="text" class="form-control mt-2" id="key1" placeholder="Key">
+                    <div>
+                        <button type="button" class="btn border border-1 border-primary text-primary subtle  px-6 mt-4 d-grid gap-2 mx-auto" onclick="retrieve(event)">Retrieve Records</button><br>
+                    </div>
+                    <div id="result">
+
+                    </div>
+                </form>
+            </div>
+            <div class="col col-3 rounded shadow border border-3 border-dark-light p-4 ">
+                <h3 class="text-center text-primary mt-5">Enter Key to <br> Delete Item</h3>
+                <form action="" id="myform3">
+                    <label for="">Key</label>
+                    <input type="text" class="form-control mt-2" id="deletekey" placeholder="Key">
+                    <div>
+                        <button type="button" class="btn border border-1 border-danger text-danger subtle  px-6 mt-4 d-grid gap-2 mx-auto" onclick="deletecar(event)">Delete Records</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+           
+                <button type="button" class="bg-dark btn-block text-white mt-4 px-6 btn border border-1" onclick="clearall()">Clear All Records</button>
+            
+        </div>
+    </div>
+    
+    
+</body>
+<script src="./script.js"></script>
+</html>
